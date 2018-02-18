@@ -21,7 +21,7 @@ def hello_world():
     imageURL = str(imageURL)
     ocr_url = 'https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/ocr'
     #image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Atomist_quote_from_Democritus.png/338px-Atomist_quote_from_Democritus.png"
-    subscription_key = '674c2a16cc18418fb514d1df71071490'
+    subscription_key = 'Your_subscription_key'
     headers  = {'Ocp-Apim-Subscription-Key': subscription_key }
     params   = {'language': 'unk', 'detectOrientation ': 'true'}
     data     = {'url': imageURL}
@@ -37,8 +37,8 @@ def hello_world():
         for word_metadata in line:
             for word_info in word_metadata["words"]:
                 word_infos.append(word_info)
-        #print word_infos
-        #word_info[0]['text']
+    #print word_infos
+    #word_info[0]['text']
     for x in word_infos :
         json_words.append(x[u'text'])
         
@@ -49,23 +49,7 @@ def hello_world():
     return js
 
 
-#  def get_suggestions ():
-#      subscriptionKey = 'b47216ed1fca42f1bc0af85a35acf7b9'
 
-#      host = 'api.microsofttranslator.com'
-#      path = '/V2/Http.svc/Translate'
-
-#      target = 'th-th'
-#      text = "input"
-#      params = '?to=' + target + '&text=' + urllib.parse.quote (text)
-
-#      headers = {'Ocp-Apim-Subscription-Key': subscriptionKey}
-#      conn = httplib.HTTPSConnection('api.microsofttranslator.com')
-#      conn.requests.get(path + params, None, headers)
-#      response = conn.getresponse ()
-#      return response.read ()
-
-# do something with app...
 @app.route('/index')
 def p1():
     return render_template('index.html')

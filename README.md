@@ -6,7 +6,7 @@ This repository can directly be deployed to Azure App Service.
 
 For more information, please see the [Python on App Service Quickstart docs](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-get-started-python).
 
-To run this program -> python main.py
+To run this program -> python main.py 
 
 # Contributing
 
