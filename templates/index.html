@@ -1,0 +1,45 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+    eWord
+{% endblock %}
+
+
+      
+
+
+
+{% block content %}
+    <div style="background-color:beige;">
+        <div align="center">
+            <h1 style="background-color:rgb(231, 193, 136);">EWords</h1>
+        </div>
+        
+        <div>
+             <h2 align="center" style="font-weight:lighter;">Put in your image URL</h2>
+        </div>
+        <form action ="result" method ="GET" align="center">
+
+                <input type="text" class="form-control" aria-label="Text input with radio button" name=imageURL>
+                <a href='#' id=process_input style="margin-top:5px;"><input type="submit" value="submit" class="btn btn-primary btn-lg" /></a>
+        </form>
+           
+        
+        <div class="container" >
+            <div>
+                <h3 align="center" style="font-weight:lighter;">Your Image</h3>
+                <div align="center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Atomist_quote_from_Democritus.png/338px-Atomist_quote_from_Democritus.png">
+                </div>
+            </div>
+            
+            <div>
+                <h3 align="center" style="font-weight:lighter;"> Result </h3>
+            </div>
+                
+        </div>
+        
+
+     </div>
+    
+    
+{% endblock %}
